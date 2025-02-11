@@ -1,0 +1,8 @@
+﻿[build]
+builder = "dockerfile"
+dockerfilePath = "./WebAPIRailwayDeploy/Dockerfile"
+
+[deploy]
+startCommand = "./WebAPIRailwayDeploy"
+restartPolicyType = "always"
+healthcheckPath = "/health"
