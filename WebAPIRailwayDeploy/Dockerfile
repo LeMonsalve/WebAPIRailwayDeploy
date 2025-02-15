@@ -1,4 +1,5 @@
 ﻿FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils clang zliblg-dev
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["WebAPIRailwayDeploy/WebAPIRailwayDeploy.csproj", "WebAPIRailwayDeploy/"]
